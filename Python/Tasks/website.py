@@ -21,7 +21,31 @@ ABd1234@1
 import re
 value = []
 items=[x for x in raw_input("enter the password ").split(',')]
-print items
+
+for p in items:
+    if 6 <= len(p) <= 12:
+        if re.search('[a-zA-Z]', p) and re.search('[0-9]', p) and re.search('[$#@]', p):
+            value.append(p)
+    else:
+        continue
+print ",".join(value)
+
+"""
+import re
+value = []
+items=[x for x in input("enter the password ").split(',')]
+
+for p in items:
+    if 6 <= len(p) <= 12:
+        if re.search('[a-zA-Z]', p) and re.search('[0-9]', p) and re.search('[$#@]', p):
+            value.append(p)
+    else:
+        continue
+print(",".join(value))
+"""
+
+#below is original code from the person who put up the Question.
+"""
 for p in items:
      print "length is ",len(p)
      if len(p)<6 or len(p)>12:
@@ -41,7 +65,7 @@ for p in items:
      else:
                value.append(p)
 print " , ".join(value)
-
+"""
 """
 output:
 enter the password Udac!@323, @Fhguwewh123,Lalit@123
