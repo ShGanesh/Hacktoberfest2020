@@ -1,9 +1,13 @@
 # reverse the number
 
 def reverseNumber(n):
-  Reverse = 0
-  while(n > 0):
-    
-  return Reverse
- 
-print reverseNumber(1565)
+    while (n > 0):
+        a = list(str(n))
+        break
+    a.reverse()
+    Reverse = "".join(a)
+    return int(Reverse)
+
+
+print(reverseNumber(1565))
+
