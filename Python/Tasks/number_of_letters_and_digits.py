@@ -9,8 +9,9 @@ DIGITS 3
 
 s = raw_input("enter the sentence")
 d={"DIGITS":0, "LETTERS":0}
-for c in s:
-   
-        pass
+for c in s:                            
+    if c.isdigit(): d["DIGITS"] += 1      
+    elif c.isalpha(): d["LETTERS"] += 1
+    else: pass             # unness tho             
 print "LETTERS", d["LETTERS"]
 print "DIGITS", d["DIGITS"]
